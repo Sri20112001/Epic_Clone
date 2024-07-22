@@ -1,11 +1,12 @@
 import { DisplayGamesList } from "./DisplayGamesList"
+import { Filter } from "./Filter"
 
 export const DisplayGames = () => {
   return (
     <>
-    <div className="grid grid-cols-[1000px] ">
+    <div className="flex flex-row ">
         <DisplayGamesList/>
-       
+        <Filter/>
     </div>
     </>
   )

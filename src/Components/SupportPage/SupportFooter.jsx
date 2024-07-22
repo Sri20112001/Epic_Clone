@@ -88,7 +88,7 @@ export const SupportFooter = () => {
   };
   return (
     <>
-      <div className="mt-12 bg-[#202020] px-[100px] py-8 h-full">
+      <div className="mt-12 bg-[#202020] px-[100px] py-8">
         <div className="flex flex-row items-center justify-between">
           <div className="flex flex-row gap-2">
             <svg

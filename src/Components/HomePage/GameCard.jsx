@@ -1,12 +1,16 @@
 /* eslint-disable react/no-unknown-property */
 /* eslint-disable react/prop-types */
 import { useState } from "react";
+import { useAddtoList } from "../StateManagement/AddtoList";
 
 export const GameCard = ({ game }) => {
-  const [add, setAdd] = useState(false)
+  const [add, setAdd] = useState(false);
+  const { addedGames, addGame } = useAddtoList();
 
   const addtoList = () => {
     setAdd(!add)
+    addGame(game)
+    console.log("Add To List:",addedGames)
   }
 
   return (

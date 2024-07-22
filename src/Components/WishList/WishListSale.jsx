@@ -1,20 +1,21 @@
-export const Sort = () => {
-  const sortValue = [
-    "All",
-    "New Release",
-    "Coming Soon",
-    "Alphabetical",
-    "Price: Hight to Low",
-    "Price: Low to High",
-  ];
+
+export const WishListSort = () => {
+    const sortValue = [
+        "All",
+        "New Release",
+        "Coming Soon",
+        "Alphabetical",
+        "Price: Hight to Low",
+        "Price: Low to High",
+      ];
   return (
     <>
-      <div className="mt-16 flex flex-row">
+    <div className="mt-6 flex flex-row items-start">
         <label htmlFor="sort" className="text-white">
           Show:
         </label>
         <select
-          className="bg-transparent text-white focus:outline-white px-2"
+          className="bg-transparent text-white focus:outline-white px-2 "
           name="sort"
           id="sort"
         >
@@ -30,5 +31,5 @@ export const Sort = () => {
         </select>
       </div>
     </>
-  );
-};
+  )
+}

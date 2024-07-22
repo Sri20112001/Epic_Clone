@@ -11,8 +11,8 @@ import { Footer } from "./Footer";
 export const HomePage = () => {
   return (
     <>
-    <div className="2xl:container w-[90%] mx-auto bg-black">
-       <Header/>
+      <div className="2xl:container w-[90%] mx-auto bg-black">
+        <Header />
         <div className="w-[90%] mx-auto ">
           <SearchBar />
           <Event />
@@ -22,9 +22,8 @@ export const HomePage = () => {
           <DealofWeek />
           <FreeGame />
         </div>
-        
-        <Footer/>
+        <Footer />
       </div>
     </>
-  )
-}
+  );
+};

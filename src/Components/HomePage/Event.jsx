@@ -6,10 +6,10 @@ export const Event = () => {
   ];
   return (
     <>
-      <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center place-content-center gap-4">
+      <div className="grid sm:grid-cols-3 justify-items-center place-content-center gap-4">
         {image.map((item, index) => (
           <span key={index} className="">
-            <img className="w-[100%] rounded-lg " src={item} />
+            <img className="w-full rounded-lg " src={item} />
           </span>
         ))}
       </div>

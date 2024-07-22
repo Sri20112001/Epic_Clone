@@ -5,6 +5,7 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import { HomePage } from "./Components/HomePage/HomePage";
 import { SupportPage } from "./Components/SupportPage/SupportPage";
 import { BrowsePage } from "./Components/BrowsePage/BrowsePage";
+import { WishListLayout } from "./Components/WishList/WishListLayout";
 
 const router = createBrowserRouter([
   {
@@ -18,6 +19,10 @@ const router = createBrowserRouter([
   {
     path: "/Browse",
     element: <BrowsePage/>
+  },
+  {
+    path: "/WishList",
+    element: <WishListLayout/>
   }
 ]);
 ReactDOM.createRoot(document.getElementById("root")).render(

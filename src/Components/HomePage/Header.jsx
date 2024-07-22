@@ -6,6 +6,7 @@ import { LanguageMenu } from "../HomePage/LanguageMenu";
 import { SupportPage } from "../SupportPage/SupportPage";
 
 import { Link } from "react-router-dom";
+import { WishListLayout } from "../WishList/WishListLayout";
 
 export const Header = () => {
   const [distributeMenu, setDistributeMenu] = useState(false);
@@ -37,6 +38,11 @@ export const Header = () => {
       label: "Distribute",
       function: [dristibureEnter, distributeLeave],
     },
+    {
+      label: "Wishlist",
+      path: "/WishList",
+      link: <WishListLayout/>
+    }
   ];
 
   const menuVisible = useMenuStore((state) => state.menuVisible);

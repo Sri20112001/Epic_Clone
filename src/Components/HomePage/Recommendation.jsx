@@ -75,22 +75,19 @@ export const Recommendation = () => {
     };
 
     const intervalID = setInterval(incrementValue, 10000);
-
+    console.log("SliderValue:", sliderValue);
     return () => clearInterval(intervalID);
-  }, [menuConent.length]);
+  }, [menuConent.length, sliderValue]);
 
   const controlSlider = (menu) => {
-    console.log(menu.id)
-    console.log("Before:",menu.id)
     setSliderValue(menu.id - 1);
-    console.log("After:",menu.id)
   };
 
   return (
     <>
       <div className="flex flex-row item-start gap-8 mt-12 mb-12 ">
         <div
-          className={`h-[650px] w-[90%] rounded-xl
+          className={`h-[600px] w-[100%] rounded-xl
                 bg-no-repeat
                 bg-cover
                 bg-right-top
@@ -99,7 +96,7 @@ export const Recommendation = () => {
                 `}
           style={{ backgroundImage: `url(${menuConent[sliderValue].image})` }}
         >
-          <div className="flex flex-col p-8 rounded-lg text-white">
+          <div className="flex flex-col p-8 rounded-lg text-white ">
             <h2 className="text-3xl font-bold mb-2">
               {menuConent[sliderValue].title}
             </h2>
@@ -134,11 +131,18 @@ export const Recommendation = () => {
           </div>
         </div>
 
-        <div className="flex flex-col justify-start">
-          {menuList.map((menu) => (
+        <div className="flex flex-col justify-start h-[600px] gap-2">
+          {menuList.map((menu, index) => (
             <span
               key={menu.id}
-              className="flex flex-col items-center justify-center h-32 w-full rounded-xl px-2 hover:bg-gray-800 transition-colors duration-200"
+              className={`flex flex-col items-center justify-center h-32 w-full rounded-xl px-2
+                 transition-transform duration-500 ease-in-out
+                ${
+                  sliderValue == index
+                    ? "bg-[#252525]  "
+                    : null
+                }
+               hover:bg-gray-800 transition-colors duration-200`}
             >
               <button
                 className="flex items-center w-full gap-4 px-3 py-1 transition-colors duration-200"
